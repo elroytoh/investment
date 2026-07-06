@@ -1,0 +1,17 @@
+{
+  "asOf": "2026-07-03T21:30:00+00:00",
+  "note": "SAMPLE DATA -- replace automatically after the first GitHub Action run",
+  "rows": [
+    { "sector": "Health Care", "avgPE": 18.9, "avgReturn1M": 5.4, "count": 61 },
+    { "sector": "Energy", "avgPE": 14.1, "avgReturn1M": 1.8, "count": 23 },
+    { "sector": "Financials", "avgPE": 20.3, "avgReturn1M": 1.2, "count": 71 },
+    { "sector": "Consumer Staples", "avgPE": 24.6, "avgReturn1M": 0.3, "count": 38 },
+    { "sector": "Utilities", "avgPE": 19.2, "avgReturn1M": 0.2, "count": 31 },
+    { "sector": "Industrials", "avgPE": 23.5, "avgReturn1M": -0.3, "count": 74 },
+    { "sector": "Materials", "avgPE": 21.0, "avgReturn1M": -0.5, "count": 26 },
+    { "sector": "Real Estate", "avgPE": 27.8, "avgReturn1M": -0.8, "count": 31 },
+    { "sector": "Communication Services", "avgPE": 25.1, "avgReturn1M": -1.1, "count": 22 },
+    { "sector": "Consumer Discretionary", "avgPE": 29.4, "avgReturn1M": -1.9, "count": 51 },
+    { "sector": "Technology", "avgPE": 34.7, "avgReturn1M": -2.8, "count": 65 }
+  ]
+}
