@@ -18,198 +18,77 @@
     --sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
     --display: 'Space Grotesk', var(--sans);
   }
-
   *{ box-sizing: border-box; }
-
-  body{
-    margin:0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    -webkit-font-smoothing: antialiased;
-  }
-
+  body{ margin:0; background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   a{ color: var(--accent); }
-
-  .desk{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px 80px;
-  }
-
-  header.top{
-    padding: 40px 0 20px;
-    border-bottom: 1px solid var(--panel-line);
-  }
-
-  .eyebrow{
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 8px;
-  }
-
-  h1{
-    font-family: var(--display);
-    font-size: 34px;
-    font-weight: 600;
-    margin: 0 0 6px;
-    letter-spacing: -0.01em;
-  }
-
-  .sub{
-    color: var(--muted);
-    font-size: 14px;
-    margin: 0;
-  }
-
+  .desk{ max-width: 1150px; margin: 0 auto; padding: 0 24px 80px; }
+  header.top{ padding: 40px 0 20px; border-bottom: 1px solid var(--panel-line); }
+  .eyebrow{ font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+  h1{ font-family: var(--display); font-size: 34px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub{ color: var(--muted); font-size: 14px; margin: 0; }
   .sub span{ color: var(--text); }
 
-  .tape-wrap{
-    overflow: hidden;
-    border-top: 1px solid var(--panel-line);
-    border-bottom: 1px solid var(--panel-line);
-    background: var(--panel);
-    margin: 0 -24px;
-    position: relative;
-  }
-  .tape-wrap::before, .tape-wrap::after{
-    content:"";
-    position:absolute; top:0; bottom:0; width:40px; z-index:2;
-  }
+  .tape-wrap{ overflow: hidden; border-top: 1px solid var(--panel-line); border-bottom: 1px solid var(--panel-line); background: var(--panel); margin: 0 -24px; position: relative; }
+  .tape-wrap::before, .tape-wrap::after{ content:""; position:absolute; top:0; bottom:0; width:40px; z-index:2; }
   .tape-wrap::before{ left:0; background: linear-gradient(90deg, var(--panel), transparent); }
   .tape-wrap::after{ right:0; background: linear-gradient(270deg, var(--panel), transparent); }
-
-  .tape{
-    display: flex;
-    width: max-content;
-    animation: scroll-tape 38s linear infinite;
-  }
+  .tape{ display: flex; width: max-content; animation: scroll-tape 38s linear infinite; }
   .tape:hover{ animation-play-state: paused; }
-
-  @keyframes scroll-tape{
-    from{ transform: translateX(0); }
-    to{ transform: translateX(-50%); }
-  }
-
-  .tape-item{
-    font-family: var(--mono);
-    font-size: 13px;
-    padding: 12px 22px;
-    white-space: nowrap;
-    border-right: 1px solid var(--panel-line);
-  }
+  @keyframes scroll-tape{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+  .tape-item{ font-family: var(--mono); font-size: 13px; padding: 12px 22px; white-space: nowrap; border-right: 1px solid var(--panel-line); }
   .tape-item b{ color: var(--text); margin-right: 8px; }
   .tape-item .pe{ color: var(--muted); margin-right: 8px; }
   .sig-below{ color: var(--positive); }
   .sig-above{ color: var(--negative); }
   .sig-inline{ color: var(--muted); }
 
-  nav.tabs{
-    display: flex;
-    gap: 4px;
-    margin: 28px 0 0;
-    border-bottom: 1px solid var(--panel-line);
-  }
-  nav.tabs button{
-    font-family: var(--mono);
-    font-size: 13px;
-    letter-spacing: 0.03em;
-    background: none;
-    border: none;
-    color: var(--muted);
-    padding: 12px 4px;
-    margin-right: 24px;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    text-transform: uppercase;
-  }
-  nav.tabs button.active{
-    color: var(--text);
-    border-bottom-color: var(--accent);
-  }
+  nav.tabs{ display: flex; gap: 4px; margin: 28px 0 0; border-bottom: 1px solid var(--panel-line); flex-wrap: wrap; }
+  nav.tabs button{ font-family: var(--mono); font-size: 13px; letter-spacing: 0.03em; background: none; border: none; color: var(--muted); padding: 12px 4px; margin-right: 24px; cursor: pointer; border-bottom: 2px solid transparent; text-transform: uppercase; }
+  nav.tabs button.active{ color: var(--text); border-bottom-color: var(--accent); }
   nav.tabs button:hover{ color: var(--text); }
 
   section.panel{ display: none; padding-top: 28px; }
   section.panel.active{ display: block; }
 
-  .panel-head{
-    display:flex; justify-content:space-between; align-items:baseline;
-    margin-bottom: 14px; flex-wrap: wrap; gap: 10px;
-  }
-  .panel-head h2{
-    font-family: var(--display);
-    font-size: 18px; font-weight: 600; margin: 0;
-  }
+  .panel-head{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
+  .panel-head h2{ font-family: var(--display); font-size: 18px; font-weight: 600; margin: 0; }
   .panel-note{ font-family: var(--mono); font-size: 12px; color: var(--muted); }
 
-  select{
-    background: var(--panel);
-    color: var(--text);
-    border: 1px solid var(--panel-line);
-    font-family: var(--mono);
-    font-size: 12px;
-    padding: 6px 8px;
-    border-radius: 4px;
-  }
+  select, input[type="text"]{ background: var(--panel); color: var(--text); border: 1px solid var(--panel-line); font-family: var(--mono); font-size: 12px; padding: 6px 8px; border-radius: 4px; }
+  input[type="text"]{ width: 200px; }
+  input[type="text"]::placeholder{ color: var(--muted); }
 
-  table{
-    width: 100%;
-    border-collapse: collapse;
-    font-family: var(--mono);
-    font-size: 13px;
-  }
-  thead th{
-    text-align: left;
-    color: var(--muted);
-    font-weight: 500;
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 8px 10px;
-    border-bottom: 1px solid var(--panel-line);
-    cursor: pointer;
-    white-space: nowrap;
-  }
+  label.check{ font-family: var(--mono); font-size: 12px; color: var(--muted); display:flex; align-items:center; gap:6px; cursor:pointer; }
+
+  table{ width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 13px; }
+  thead th{ text-align: left; color: var(--muted); font-weight: 500; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; padding: 8px 10px; border-bottom: 1px solid var(--panel-line); cursor: pointer; white-space: nowrap; }
   thead th:hover{ color: var(--text); }
   thead th.sorted::after{ content: " ▾"; color: var(--accent); }
-  tbody td{
-    padding: 9px 10px;
-    border-bottom: 1px solid var(--panel-line);
-    white-space: nowrap;
-  }
+  tbody td{ padding: 9px 10px; border-bottom: 1px solid var(--panel-line); white-space: nowrap; }
   tbody tr:hover{ background: rgba(255,255,255,0.02); }
   td.num, th.num{ text-align: right; }
   .name-cell{ color: var(--muted); font-family: var(--sans); font-size: 12px; }
+  .scroll-table{ max-height: 620px; overflow-y: auto; border: 1px solid var(--panel-line); border-radius: 6px; }
+  .scroll-table table{ font-size: 12.5px; }
+  .scroll-table thead th{ position: sticky; top: 0; background: var(--bg); z-index: 1; }
 
-  .tag{
-    font-size: 10px;
-    padding: 2px 7px;
-    border-radius: 3px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
+  .tag{ font-size: 10px; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.03em; text-transform: uppercase; }
   .tag.below{ background: rgba(79,174,124,0.15); color: var(--positive); }
   .tag.above{ background: rgba(217,88,79,0.15); color: var(--negative); }
   .tag.inline{ background: rgba(124,135,148,0.15); color: var(--muted); }
+  .tag.warn{ background: rgba(217,88,79,0.18); color: var(--negative); }
+  .tag.ok{ background: rgba(79,174,124,0.12); color: var(--positive); }
 
-  .foot-note{
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--panel-line);
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.6;
-  }
+  .heatmap-grid{ display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+  .heat-tile{ border-radius: 8px; padding: 14px 14px 12px; border: 1px solid var(--panel-line); }
+  .heat-tile .sector-name{ font-family: var(--display); font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .heat-tile .metric-row{ display:flex; justify-content:space-between; font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.85); margin-top: 2px; }
+  .heat-tile .metric-label{ opacity: 0.75; }
+  .heat-legend{ display:flex; align-items:center; gap:8px; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-bottom: 16px; }
+  .heat-legend .swatch{ width: 14px; height: 14px; border-radius: 3px; display:inline-block; }
 
-  .empty{
-    font-family: var(--mono);
-    color: var(--muted);
-    font-size: 13px;
-    padding: 30px 10px;
-  }
+  .foot-note{ margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--panel-line); color: var(--muted); font-size: 12px; line-height: 1.6; }
+  .empty{ font-family: var(--mono); color: var(--muted); font-size: 13px; padding: 30px 10px; }
 
   @media (max-width: 640px){
     h1{ font-size: 26px; }
@@ -224,20 +103,22 @@
 
   <header class="top">
     <p class="eyebrow">Market Desk</p>
-    <h1>P/E &amp; Covered Call Tracker</h1>
-    <p class="sub">Mag 7 valuation, a quality-stock watchlist, and covered call screening — refreshed daily. <span id="as-of">Loading…</span></p>
+    <h1>P/E, Sector Rotation &amp; Covered Call Tracker</h1>
+    <p class="sub">Mag 7 valuation, the full S&amp;P 500 ranked by P/E, sector rotation, and covered call screening — refreshed daily. <span id="as-of">Loading…</span></p>
   </header>
 
   <div class="tape-wrap">
-    <div class="tape" id="tape"><!-- populated by JS --></div>
+    <div class="tape" id="tape"></div>
   </div>
 
   <nav class="tabs">
     <button class="tab-btn active" data-tab="mag7">Mag 7 P/E</button>
-    <button class="tab-btn" data-tab="watchlist">Watchlist P/E</button>
+    <button class="tab-btn" data-tab="watchlist">S&amp;P 500 P/E</button>
+    <button class="tab-btn" data-tab="heatmap">Sector Heatmap</button>
     <button class="tab-btn" data-tab="calls">Covered Calls</button>
   </nav>
 
+  <!-- MAG 7 -->
   <section class="panel active" id="panel-mag7">
     <div class="panel-head">
       <h2>Magnificent 7 — Valuation</h2>
@@ -246,39 +127,56 @@
     <div id="mag7-table"></div>
   </section>
 
+  <!-- S&P 500 WATCHLIST -->
   <section class="panel" id="panel-watchlist">
     <div class="panel-head">
-      <h2>Quality Watchlist — P/E vs. Benchmarks</h2>
-      <span class="panel-note" id="benchmark-note"></span>
+      <h2>S&amp;P 500 — Ranked by P/E (smallest → largest)</h2>
+      <input type="text" id="watchlist-search" placeholder="Filter ticker, name, or sector...">
     </div>
-    <div id="watchlist-table"></div>
+    <p class="panel-note" id="benchmark-note" style="margin:-6px 0 14px;"></p>
+    <div class="scroll-table" id="watchlist-table"></div>
   </section>
 
+  <!-- SECTOR HEATMAP -->
+  <section class="panel" id="panel-heatmap">
+    <div class="panel-head">
+      <h2>Sector Rotation Heatmap</h2>
+      <span class="panel-note">tile color = avg 1-month return · label = avg trailing P/E</span>
+    </div>
+    <div class="heat-legend">
+      <span class="swatch" style="background:#7A2A22"></span> selling off
+      <span class="swatch" style="background:#2A2E38"></span> flat
+      <span class="swatch" style="background:#1E5C40"></span> rotating in
+    </div>
+    <div class="heatmap-grid" id="heatmap-grid"></div>
+  </section>
+
+  <!-- COVERED CALLS -->
   <section class="panel" id="panel-calls">
     <div class="panel-head">
       <h2>Covered Call Screener</h2>
-      <select id="ticker-filter"><option value="">All tickers</option></select>
+      <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+        <label class="check"><input type="checkbox" id="hide-earnings" checked> Hide contracts with earnings before expiry</label>
+        <select id="ticker-filter"><option value="">All tickers</option></select>
+      </div>
     </div>
     <p class="panel-note" style="margin:-6px 0 14px;">
-      Out-of-the-money calls across the watchlist, ranked by annualized return.
-      This is a calculator, not a recommendation — check liquidity, earnings dates, and your own risk tolerance before writing any contract.
+      Out-of-the-money calls across a curated quality watchlist, ranked by annualized return.
+      A calculator, not a recommendation — check liquidity and your own risk tolerance before writing any contract.
     </p>
     <div id="calls-table"></div>
   </section>
 
   <div class="foot-note">
-    Data via Yahoo Finance (yfinance), refreshed on a schedule by GitHub Actions. P/E signals and covered call returns are simplified estimates for screening purposes — verify pricing on your broker before trading. Not investment advice.
+    Data via Yahoo Finance (yfinance) and Wikipedia's S&amp;P 500 constituent list, refreshed on a schedule by GitHub Actions.
+    P/E signals, sector averages, and covered call returns are simplified estimates for screening purposes — verify pricing and earnings dates on your broker before trading. Not investment advice.
   </div>
 
 </div>
 
 <script>
 const fmtNum = (v, d=2) => (v === null || v === undefined || isNaN(v)) ? '—' : Number(v).toFixed(d);
-const fmtDate = (iso) => {
-  try {
-    return new Date(iso).toLocaleString('en-SG', { dateStyle: 'medium', timeStyle: 'short' });
-  } catch(e){ return iso; }
-};
+const fmtDate = (iso) => { try { return new Date(iso).toLocaleString('en-SG', { dateStyle: 'medium', timeStyle: 'short' }); } catch(e){ return iso; } };
 const tagFor = (signal) => {
   if (signal === 'below avg') return '<span class="tag below">below avg</span>';
   if (signal === 'above avg') return '<span class="tag above">above avg</span>';
@@ -286,69 +184,133 @@ const tagFor = (signal) => {
   return '<span class="tag inline">n/a</span>';
 };
 
-let peState = { mag7: [], watchlist: [], benchmarks: [], calls: [] };
+let state = { mag7: [], watchlist: [], benchmarks: [], heatmap: [], calls: [] };
 let sortState = {};
 
-function renderPETable(containerId, rows, tableKey){
+function sortRows(rows, key, dir){
+  return [...rows].sort((a,b) => {
+    let av = a[key], bv = b[key];
+    if (av === null || av === undefined) av = dir === 1 ? Infinity : -Infinity;
+    if (bv === null || bv === undefined) bv = dir === 1 ? Infinity : -Infinity;
+    if (typeof av === 'string') return av.localeCompare(bv) * dir;
+    return (av - bv) * dir;
+  });
+}
+
+function peCols(){
+  return [
+    { key: 'ticker', label: 'Ticker' },
+    { key: 'name', label: 'Name' },
+    { key: 'sector', label: 'Sector' },
+    { key: 'price', label: 'Price', num: true },
+    { key: 'trailingPE', label: 'Trailing P/E', num: true },
+    { key: 'forwardPE', label: 'Fwd P/E', num: true },
+    { key: 'return1M', label: '1M %', num: true },
+    { key: 'signal', label: 'Signal' },
+  ];
+}
+
+function renderPERow(r, cols){
+  let html = '<tr>';
+  cols.forEach(c => {
+    if (c.key === 'ticker') html += `<td><b>${r.ticker || '—'}</b></td>`;
+    else if (c.key === 'name') html += `<td class="name-cell">${r.name || '—'}</td>`;
+    else if (c.key === 'sector') html += `<td class="name-cell">${r.sector || '—'}</td>`;
+    else if (c.key === 'price') html += `<td class="num">${r.price ? '$'+fmtNum(r.price) : '—'}</td>`;
+    else if (c.key === 'return1M') {
+      const v = r.return1M;
+      const color = (v === null || v === undefined) ? 'var(--muted)' : (v >= 0 ? 'var(--positive)' : 'var(--negative)');
+      html += `<td class="num" style="color:${color}">${v === null || v === undefined ? '—' : (v>=0?'+':'')+fmtNum(v)+'%'}</td>`;
+    }
+    else if (c.key === 'signal') html += `<td>${tagFor(r.signal)}</td>`;
+    else html += `<td class="num">${fmtNum(r[c.key])}</td>`;
+  });
+  html += '</tr>';
+  return html;
+}
+
+function renderPETable(containerId, rows, tableKey, defaultSort){
   const container = document.getElementById(containerId);
   if (!rows || rows.length === 0){
     container.innerHTML = '<div class="empty">No data yet — waiting on the first GitHub Action run.</div>';
     return;
   }
-  const cols = [
-    { key: 'ticker', label: 'Ticker' },
-    { key: 'name', label: 'Name' },
-    { key: 'price', label: 'Price', num: true },
-    { key: 'trailingPE', label: 'Trailing P/E', num: true },
-    { key: 'forwardPE', label: 'Fwd P/E', num: true },
-    { key: 'avgPE5y', label: '5y Avg P/E', num: true },
-    { key: 'signal', label: 'Signal' },
-  ];
-  const st = sortState[tableKey] || { key: 'ticker', dir: 1 };
-  const sorted = [...rows].sort((a,b) => {
-    let av = a[st.key], bv = b[st.key];
-    if (av === null || av === undefined) av = st.dir === 1 ? Infinity : -Infinity;
-    if (bv === null || bv === undefined) bv = st.dir === 1 ? Infinity : -Infinity;
-    if (typeof av === 'string') return av.localeCompare(bv) * st.dir;
-    return (av - bv) * st.dir;
-  });
+  const cols = peCols();
+  const st = sortState[tableKey] || defaultSort;
+  const sorted = sortRows(rows, st.key, st.dir);
 
   let html = '<table><thead><tr>';
   cols.forEach(c => {
     html += `<th class="${c.num?'num':''} ${st.key===c.key?'sorted':''}" data-key="${c.key}">${c.label}</th>`;
   });
   html += '</tr></thead><tbody>';
-  sorted.forEach(r => {
-    html += '<tr>';
-    html += `<td><b>${r.ticker || '—'}</b></td>`;
-    html += `<td class="name-cell">${r.name || '—'}</td>`;
-    html += `<td class="num">${r.price ? '$'+fmtNum(r.price) : '—'}</td>`;
-    html += `<td class="num">${fmtNum(r.trailingPE)}</td>`;
-    html += `<td class="num">${fmtNum(r.forwardPE)}</td>`;
-    html += `<td class="num">${fmtNum(r.avgPE5y)}</td>`;
-    html += `<td>${tagFor(r.signal)}</td>`;
-    html += '</tr>';
-  });
+  sorted.forEach(r => html += renderPERow(r, cols));
   html += '</tbody></table>';
   container.innerHTML = html;
 
   container.querySelectorAll('thead th').forEach(th => {
     th.addEventListener('click', () => {
       const key = th.dataset.key;
-      const cur = sortState[tableKey] || { key: 'ticker', dir: 1 };
+      const cur = sortState[tableKey] || defaultSort;
       sortState[tableKey] = { key, dir: (cur.key === key ? -cur.dir : 1) };
-      renderPETable(containerId, rows, tableKey);
+      renderPETable(containerId, rows, tableKey, defaultSort);
     });
   });
 }
 
-function renderCallsTable(rows){
+function applyWatchlistFilter(){
+  const q = document.getElementById('watchlist-search').value.trim().toLowerCase();
+  if (!q) return state.watchlist;
+  return state.watchlist.filter(r =>
+    (r.ticker||'').toLowerCase().includes(q) ||
+    (r.name||'').toLowerCase().includes(q) ||
+    (r.sector||'').toLowerCase().includes(q)
+  );
+}
+
+function renderWatchlist(){
+  renderPETable('watchlist-table', applyWatchlistFilter(), 'watchlist', { key: 'trailingPE', dir: 1 });
+}
+
+function renderHeatmap(rows){
+  const grid = document.getElementById('heatmap-grid');
+  if (!rows || rows.length === 0){
+    grid.innerHTML = '<div class="empty">No sector data yet — waiting on the first GitHub Action run.</div>';
+    return;
+  }
+  const maxAbs = Math.max(1, ...rows.map(r => Math.abs(r.avgReturn1M || 0)));
+  const colorFor = (v) => {
+    if (v === null || v === undefined) return '#2A2E38';
+    const t = Math.min(Math.abs(v) / maxAbs, 1);
+    if (v >= 0){
+      const g = Math.round(46 + t * (92 - 46));
+      return `rgb(${30+t*10}, ${g+40}, ${58+t*10})`;
+    } else {
+      const rC = Math.round(42 + t * (122 - 42));
+      return `rgb(${rC}, ${42+t*4}, ${34+t*4})`;
+    }
+  };
+  grid.innerHTML = rows.map(r => `
+    <div class="heat-tile" style="background:${colorFor(r.avgReturn1M)}">
+      <div class="sector-name">${r.sector}</div>
+      <div class="metric-row"><span class="metric-label">Avg 1M return</span><span>${r.avgReturn1M === null ? '—' : (r.avgReturn1M>=0?'+':'')+fmtNum(r.avgReturn1M)+'%'}</span></div>
+      <div class="metric-row"><span class="metric-label">Avg P/E</span><span>${fmtNum(r.avgPE)}</span></div>
+      <div class="metric-row"><span class="metric-label">Stocks</span><span>${r.count}</span></div>
+    </div>
+  `).join('');
+}
+
+function renderCallsTable(){
   const container = document.getElementById('calls-table');
   const filterVal = document.getElementById('ticker-filter').value;
-  const filtered = filterVal ? rows.filter(r => r.ticker === filterVal) : rows;
+  const hideEarnings = document.getElementById('hide-earnings').checked;
 
-  if (!filtered || filtered.length === 0){
-    container.innerHTML = '<div class="empty">No contracts matched — try a different ticker, or wait on the first data refresh.</div>';
+  let rows = state.calls;
+  if (filterVal) rows = rows.filter(r => r.ticker === filterVal);
+  if (hideEarnings) rows = rows.filter(r => !r.earningsBeforeExpiry);
+
+  if (!rows || rows.length === 0){
+    container.innerHTML = '<div class="empty">No contracts matched — try a different ticker, uncheck the earnings filter, or wait on the first data refresh.</div>';
     return;
   }
 
@@ -360,17 +322,13 @@ function renderCallsTable(rows){
     { key: 'strike', label: 'Strike', num: true },
     { key: 'pctOTM', label: '% OTM', num: true },
     { key: 'premium', label: 'Premium', num: true },
-    { key: 'premiumYieldPct', label: 'Yield %', num: true },
     { key: 'annualizedReturnPct', label: 'Ann. Return %', num: true },
     { key: 'breakeven', label: 'Breakeven', num: true },
     { key: 'openInterest', label: 'OI', num: true },
+    { key: 'nextEarningsDate', label: 'Next Earnings' },
   ];
   const st = sortState['calls'] || { key: 'annualizedReturnPct', dir: -1 };
-  const sorted = [...filtered].sort((a,b) => {
-    let av = a[st.key], bv = b[st.key];
-    if (typeof av === 'string') return av.localeCompare(bv) * st.dir;
-    return (av - bv) * st.dir;
-  });
+  const sorted = sortRows(rows, st.key, st.dir);
 
   let html = '<table><thead><tr>';
   cols.forEach(c => {
@@ -386,10 +344,13 @@ function renderCallsTable(rows){
     html += `<td class="num">$${fmtNum(r.strike)}</td>`;
     html += `<td class="num">${fmtNum(r.pctOTM)}%</td>`;
     html += `<td class="num">$${fmtNum(r.premium)}</td>`;
-    html += `<td class="num">${fmtNum(r.premiumYieldPct)}%</td>`;
     html += `<td class="num" style="color:var(--accent)">${fmtNum(r.annualizedReturnPct)}%</td>`;
     html += `<td class="num">$${fmtNum(r.breakeven)}</td>`;
     html += `<td class="num">${r.openInterest}</td>`;
+    const earningsTag = r.nextEarningsDate
+      ? `${r.nextEarningsDate} ${r.earningsBeforeExpiry ? '<span class="tag warn">before expiry</span>' : '<span class="tag ok">after expiry</span>'}`
+      : '—';
+    html += `<td>${earningsTag}</td>`;
     html += '</tr>';
   });
   html += '</tbody></table>';
@@ -400,7 +361,7 @@ function renderCallsTable(rows){
       const key = th.dataset.key;
       const cur = sortState['calls'] || { key: 'annualizedReturnPct', dir: -1 };
       sortState['calls'] = { key, dir: (cur.key === key ? -cur.dir : 1) };
-      renderCallsTable(rows);
+      renderCallsTable();
     });
   });
 }
@@ -427,15 +388,15 @@ function setupTabs(){
   });
 }
 
-function populateTickerFilter(callRows){
+function populateTickerFilter(){
   const sel = document.getElementById('ticker-filter');
-  const tickers = [...new Set(callRows.map(r => r.ticker))].sort();
+  const tickers = [...new Set(state.calls.map(r => r.ticker))].sort();
   tickers.forEach(t => {
     const opt = document.createElement('option');
     opt.value = t; opt.textContent = t;
     sel.appendChild(opt);
   });
-  sel.addEventListener('change', () => renderCallsTable(peState.calls));
+  sel.addEventListener('change', renderCallsTable);
 }
 
 async function loadJSON(path){
@@ -443,41 +404,41 @@ async function loadJSON(path){
     const res = await fetch(path, { cache: 'no-store' });
     if (!res.ok) throw new Error('not found');
     return await res.json();
-  } catch(e){
-    return null;
-  }
+  } catch(e){ return null; }
 }
 
 async function init(){
   setupTabs();
 
-  const [mag7, watchlist, calls] = await Promise.all([
+  const [mag7, watchlist, heatmap, calls] = await Promise.all([
     loadJSON('data/mag7_pe.json'),
     loadJSON('data/watchlist_pe.json'),
+    loadJSON('data/sector_heatmap.json'),
     loadJSON('data/covered_calls.json'),
   ]);
 
-  const asOfCandidates = [mag7, watchlist, calls].filter(Boolean).map(d => d.asOf);
-  document.getElementById('as-of').textContent = asOfCandidates.length
-    ? 'As of ' + fmtDate(asOfCandidates[0])
-    : 'No data available yet.';
+  const asOfCandidates = [mag7, watchlist, heatmap, calls].filter(Boolean).map(d => d.asOf);
+  document.getElementById('as-of').textContent = asOfCandidates.length ? 'As of ' + fmtDate(asOfCandidates[0]) : 'No data available yet.';
 
-  peState.mag7 = mag7 ? mag7.rows : [];
-  peState.watchlist = watchlist ? watchlist.rows : [];
-  peState.benchmarks = watchlist ? watchlist.benchmarks : [];
-  peState.calls = calls ? calls.rows : [];
+  state.mag7 = mag7 ? mag7.rows : [];
+  state.watchlist = watchlist ? watchlist.rows : [];
+  state.benchmarks = watchlist ? watchlist.benchmarks : [];
+  state.heatmap = heatmap ? heatmap.rows : [];
+  state.calls = calls ? calls.rows : [];
 
-  renderTape(peState.mag7);
-  renderPETable('mag7-table', peState.mag7, 'mag7');
-  renderPETable('watchlist-table', peState.watchlist, 'watchlist');
+  renderTape(state.mag7);
+  renderPETable('mag7-table', state.mag7, 'mag7', { key: 'ticker', dir: 1 });
+  renderWatchlist();
+  renderHeatmap(state.heatmap);
 
   const bNote = document.getElementById('benchmark-note');
-  if (peState.benchmarks.length){
-    bNote.textContent = peState.benchmarks.map(b => `${b.name}: P/E ${fmtNum(b.trailingPE)}`).join('   ·   ');
-  }
+  if (state.benchmarks.length) bNote.textContent = state.benchmarks.map(b => `${b.name}: P/E ${fmtNum(b.trailingPE)}`).join('   ·   ');
 
-  populateTickerFilter(peState.calls);
-  renderCallsTable(peState.calls);
+  populateTickerFilter();
+  renderCallsTable();
+
+  document.getElementById('watchlist-search').addEventListener('input', renderWatchlist);
+  document.getElementById('hide-earnings').addEventListener('change', renderCallsTable);
 }
 
 init();
