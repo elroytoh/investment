@@ -1,0 +1,30 @@
+{
+  "asOf": "2026-07-03T21:30:00+00:00",
+  "note": "SAMPLE DATA -- replace automatically after the first GitHub Action run",
+  "benchmarks": [
+    { "ticker": "SPY", "name": "S&P 500 (SPY)", "price": 612.40, "trailingPE": 25.1, "forwardPE": 22.6, "avgPE5y": 23.4, "signal": "in line" },
+    { "ticker": "QQQ", "name": "Nasdaq 100 (QQQ)", "price": 528.90, "trailingPE": 31.8, "forwardPE": 27.9, "avgPE5y": 28.2, "signal": "in line" }
+  ],
+  "rows": [
+    { "ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology", "price": 214.32, "trailingPE": 33.1, "forwardPE": 28.4, "avgPE5y": 29.8, "signal": "above avg" },
+    { "ticker": "MSFT", "name": "Microsoft Corp.", "sector": "Technology", "price": 468.90, "trailingPE": 35.6, "forwardPE": 30.2, "avgPE5y": 33.9, "signal": "in line" },
+    { "ticker": "V", "name": "Visa Inc.", "sector": "Financial Services", "price": 356.20, "trailingPE": 30.4, "forwardPE": 27.1, "avgPE5y": 31.5, "signal": "in line" },
+    { "ticker": "MA", "name": "Mastercard Inc.", "sector": "Financial Services", "price": 552.80, "trailingPE": 34.2, "forwardPE": 29.6, "avgPE5y": 35.0, "signal": "in line" },
+    { "ticker": "COST", "name": "Costco Wholesale", "sector": "Consumer Defensive", "price": 985.10, "trailingPE": 52.3, "forwardPE": 45.9, "avgPE5y": 42.1, "signal": "above avg" },
+    { "ticker": "JNJ", "name": "Johnson & Johnson", "sector": "Healthcare", "price": 162.40, "trailingPE": 15.9, "forwardPE": 14.8, "avgPE5y": 17.2, "signal": "below avg" },
+    { "ticker": "PG", "name": "Procter & Gamble", "sector": "Consumer Defensive", "price": 168.90, "trailingPE": 25.0, "forwardPE": 23.4, "avgPE5y": 24.6, "signal": "in line" },
+    { "ticker": "KO", "name": "Coca-Cola Co.", "sector": "Consumer Defensive", "price": 71.20, "trailingPE": 26.1, "forwardPE": 23.8, "avgPE5y": 25.3, "signal": "in line" },
+    { "ticker": "PEP", "name": "PepsiCo Inc.", "sector": "Consumer Defensive", "price": 148.60, "trailingPE": 21.3, "forwardPE": 19.7, "avgPE5y": 24.8, "signal": "below avg" },
+    { "ticker": "HD", "name": "Home Depot Inc.", "sector": "Consumer Cyclical", "price": 398.70, "trailingPE": 26.8, "forwardPE": 24.5, "avgPE5y": 24.1, "signal": "above avg" },
+    { "ticker": "WMT", "name": "Walmart Inc.", "sector": "Consumer Defensive", "price": 96.30, "trailingPE": 38.5, "forwardPE": 33.2, "avgPE5y": 29.7, "signal": "above avg" },
+    { "ticker": "JPM", "name": "JPMorgan Chase", "sector": "Financial Services", "price": 268.10, "trailingPE": 14.2, "forwardPE": 13.1, "avgPE5y": 12.6, "signal": "above avg" },
+    { "ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "price": 312.40, "trailingPE": 13.8, "forwardPE": 12.9, "avgPE5y": 21.4, "signal": "below avg" },
+    { "ticker": "ABBV", "name": "AbbVie Inc.", "sector": "Healthcare", "price": 198.20, "trailingPE": 17.6, "forwardPE": 15.9, "avgPE5y": 18.3, "signal": "in line" },
+    { "ticker": "MCD", "name": "McDonald's Corp.", "sector": "Consumer Cyclical", "price": 302.50, "trailingPE": 24.9, "forwardPE": 22.7, "avgPE5y": 25.8, "signal": "in line" },
+    { "ticker": "XOM", "name": "Exxon Mobil Corp.", "sector": "Energy", "price": 118.90, "trailingPE": 13.1, "forwardPE": 12.4, "avgPE5y": 14.7, "signal": "below avg" },
+    { "ticker": "CVX", "name": "Chevron Corp.", "sector": "Energy", "price": 162.30, "trailingPE": 14.6, "forwardPE": 13.5, "avgPE5y": 15.9, "signal": "below avg" },
+    { "ticker": "DIS", "name": "Walt Disney Co.", "sector": "Communication Services", "price": 112.80, "trailingPE": 20.4, "forwardPE": 18.2, "avgPE5y": 32.6, "signal": "below avg" },
+    { "ticker": "NKE", "name": "Nike Inc.", "sector": "Consumer Cyclical", "price": 78.40, "trailingPE": 24.1, "forwardPE": 21.6, "avgPE5y": 30.2, "signal": "below avg" },
+    { "ticker": "BRK-B", "name": "Berkshire Hathaway", "sector": "Financial Services", "price": 468.30, "trailingPE": 22.7, "forwardPE": null, "avgPE5y": 20.4, "signal": "above avg" }
+  ]
+}

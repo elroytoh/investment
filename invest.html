@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Desk — Elroy Toh</title>
+<style>
+  :root{
+    --bg: #0C0F14;
+    --panel: #131820;
+    --panel-line: #232B36;
+    --text: #E7E4DC;
+    --muted: #7C8794;
+    --accent: #E8A33D;
+    --positive: #4FAE7C;
+    --negative: #D9584F;
+    --mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+    --sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Space Grotesk', var(--sans);
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--accent); }
+
+  .desk{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  header.top{
+    padding: 40px 0 20px;
+    border-bottom: 1px solid var(--panel-line);
+  }
+
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+
+  h1{
+    font-family: var(--display);
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .sub{
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .sub span{ color: var(--text); }
+
+  .tape-wrap{
+    overflow: hidden;
+    border-top: 1px solid var(--panel-line);
+    border-bottom: 1px solid var(--panel-line);
+    background: var(--panel);
+    margin: 0 -24px;
+    position: relative;
+  }
+  .tape-wrap::before, .tape-wrap::after{
+    content:"";
+    position:absolute; top:0; bottom:0; width:40px; z-index:2;
+  }
+  .tape-wrap::before{ left:0; background: linear-gradient(90deg, var(--panel), transparent); }
+  .tape-wrap::after{ right:0; background: linear-gradient(270deg, var(--panel), transparent); }
+
+  .tape{
+    display: flex;
+    width: max-content;
+    animation: scroll-tape 38s linear infinite;
+  }
+  .tape:hover{ animation-play-state: paused; }
+
+  @keyframes scroll-tape{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+
+  .tape-item{
+    font-family: var(--mono);
+    font-size: 13px;
+    padding: 12px 22px;
+    white-space: nowrap;
+    border-right: 1px solid var(--panel-line);
+  }
+  .tape-item b{ color: var(--text); margin-right: 8px; }
+  .tape-item .pe{ color: var(--muted); margin-right: 8px; }
+  .sig-below{ color: var(--positive); }
+  .sig-above{ color: var(--negative); }
+  .sig-inline{ color: var(--muted); }
+
+  nav.tabs{
+    display: flex;
+    gap: 4px;
+    margin: 28px 0 0;
+    border-bottom: 1px solid var(--panel-line);
+  }
+  nav.tabs button{
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    background: none;
+    border: none;
+    color: var(--muted);
+    padding: 12px 4px;
+    margin-right: 24px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+  }
+  nav.tabs button.active{
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+  nav.tabs button:hover{ color: var(--text); }
+
+  section.panel{ display: none; padding-top: 28px; }
+  section.panel.active{ display: block; }
+
+  .panel-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 10px;
+  }
+  .panel-head h2{
+    font-family: var(--display);
+    font-size: 18px; font-weight: 600; margin: 0;
+  }
+  .panel-note{ font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+  select{
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--panel-line);
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 4px;
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  thead th{
+    text-align: left;
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--panel-line);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  thead th:hover{ color: var(--text); }
+  thead th.sorted::after{ content: " ▾"; color: var(--accent); }
+  tbody td{
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--panel-line);
+    white-space: nowrap;
+  }
+  tbody tr:hover{ background: rgba(255,255,255,0.02); }
+  td.num, th.num{ text-align: right; }
+  .name-cell{ color: var(--muted); font-family: var(--sans); font-size: 12px; }
+
+  .tag{
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .tag.below{ background: rgba(79,174,124,0.15); color: var(--positive); }
+  .tag.above{ background: rgba(217,88,79,0.15); color: var(--negative); }
+  .tag.inline{ background: rgba(124,135,148,0.15); color: var(--muted); }
+
+  .foot-note{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--panel-line);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .empty{
+    font-family: var(--mono);
+    color: var(--muted);
+    font-size: 13px;
+    padding: 30px 10px;
+  }
+
+  @media (max-width: 640px){
+    h1{ font-size: 26px; }
+    table{ font-size: 12px; }
+    thead th, tbody td{ padding: 7px 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="desk">
+
+  <header class="top">
+    <p class="eyebrow">Market Desk</p>
+    <h1>P/E &amp; Covered Call Tracker</h1>
+    <p class="sub">Mag 7 valuation, a quality-stock watchlist, and covered call screening — refreshed daily. <span id="as-of">Loading…</span></p>
+  </header>
+
+  <div class="tape-wrap">
+    <div class="tape" id="tape"><!-- populated by JS --></div>
+  </div>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="mag7">Mag 7 P/E</button>
+    <button class="tab-btn" data-tab="watchlist">Watchlist P/E</button>
+    <button class="tab-btn" data-tab="calls">Covered Calls</button>
+  </nav>
+
+  <section class="panel active" id="panel-mag7">
+    <div class="panel-head">
+      <h2>Magnificent 7 — Valuation</h2>
+      <span class="panel-note">signal = trailing P/E vs. 5y average</span>
+    </div>
+    <div id="mag7-table"></div>
+  </section>
+
+  <section class="panel" id="panel-watchlist">
+    <div class="panel-head">
+      <h2>Quality Watchlist — P/E vs. Benchmarks</h2>
+      <span class="panel-note" id="benchmark-note"></span>
+    </div>
+    <div id="watchlist-table"></div>
+  </section>
+
+  <section class="panel" id="panel-calls">
+    <div class="panel-head">
+      <h2>Covered Call Screener</h2>
+      <select id="ticker-filter"><option value="">All tickers</option></select>
+    </div>
+    <p class="panel-note" style="margin:-6px 0 14px;">
+      Out-of-the-money calls across the watchlist, ranked by annualized return.
+      This is a calculator, not a recommendation — check liquidity, earnings dates, and your own risk tolerance before writing any contract.
+    </p>
+    <div id="calls-table"></div>
+  </section>
+
+  <div class="foot-note">
+    Data via Yahoo Finance (yfinance), refreshed on a schedule by GitHub Actions. P/E signals and covered call returns are simplified estimates for screening purposes — verify pricing on your broker before trading. Not investment advice.
+  </div>
+
+</div>
+
+<script>
+const fmtNum = (v, d=2) => (v === null || v === undefined || isNaN(v)) ? '—' : Number(v).toFixed(d);
+const fmtDate = (iso) => {
+  try {
+    return new Date(iso).toLocaleString('en-SG', { dateStyle: 'medium', timeStyle: 'short' });
+  } catch(e){ return iso; }
+};
+const tagFor = (signal) => {
+  if (signal === 'below avg') return '<span class="tag below">below avg</span>';
+  if (signal === 'above avg') return '<span class="tag above">above avg</span>';
+  if (signal === 'in line') return '<span class="tag inline">in line</span>';
+  return '<span class="tag inline">n/a</span>';
+};
+
+let peState = { mag7: [], watchlist: [], benchmarks: [], calls: [] };
+let sortState = {};
+
+function renderPETable(containerId, rows, tableKey){
+  const container = document.getElementById(containerId);
+  if (!rows || rows.length === 0){
+    container.innerHTML = '<div class="empty">No data yet — waiting on the first GitHub Action run.</div>';
+    return;
+  }
+  const cols = [
+    { key: 'ticker', label: 'Ticker' },
+    { key: 'name', label: 'Name' },
+    { key: 'price', label: 'Price', num: true },
+    { key: 'trailingPE', label: 'Trailing P/E', num: true },
+    { key: 'forwardPE', label: 'Fwd P/E', num: true },
+    { key: 'avgPE5y', label: '5y Avg P/E', num: true },
+    { key: 'signal', label: 'Signal' },
+  ];
+  const st = sortState[tableKey] || { key: 'ticker', dir: 1 };
+  const sorted = [...rows].sort((a,b) => {
+    let av = a[st.key], bv = b[st.key];
+    if (av === null || av === undefined) av = st.dir === 1 ? Infinity : -Infinity;
+    if (bv === null || bv === undefined) bv = st.dir === 1 ? Infinity : -Infinity;
+    if (typeof av === 'string') return av.localeCompare(bv) * st.dir;
+    return (av - bv) * st.dir;
+  });
+
+  let html = '<table><thead><tr>';
+  cols.forEach(c => {
+    html += `<th class="${c.num?'num':''} ${st.key===c.key?'sorted':''}" data-key="${c.key}">${c.label}</th>`;
+  });
+  html += '</tr></thead><tbody>';
+  sorted.forEach(r => {
+    html += '<tr>';
+    html += `<td><b>${r.ticker || '—'}</b></td>`;
+    html += `<td class="name-cell">${r.name || '—'}</td>`;
+    html += `<td class="num">${r.price ? '$'+fmtNum(r.price) : '—'}</td>`;
+    html += `<td class="num">${fmtNum(r.trailingPE)}</td>`;
+    html += `<td class="num">${fmtNum(r.forwardPE)}</td>`;
+    html += `<td class="num">${fmtNum(r.avgPE5y)}</td>`;
+    html += `<td>${tagFor(r.signal)}</td>`;
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+
+  container.querySelectorAll('thead th').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      const cur = sortState[tableKey] || { key: 'ticker', dir: 1 };
+      sortState[tableKey] = { key, dir: (cur.key === key ? -cur.dir : 1) };
+      renderPETable(containerId, rows, tableKey);
+    });
+  });
+}
+
+function renderCallsTable(rows){
+  const container = document.getElementById('calls-table');
+  const filterVal = document.getElementById('ticker-filter').value;
+  const filtered = filterVal ? rows.filter(r => r.ticker === filterVal) : rows;
+
+  if (!filtered || filtered.length === 0){
+    container.innerHTML = '<div class="empty">No contracts matched — try a different ticker, or wait on the first data refresh.</div>';
+    return;
+  }
+
+  const cols = [
+    { key: 'ticker', label: 'Ticker' },
+    { key: 'expiry', label: 'Expiry' },
+    { key: 'dte', label: 'DTE', num: true },
+    { key: 'stockPrice', label: 'Stock', num: true },
+    { key: 'strike', label: 'Strike', num: true },
+    { key: 'pctOTM', label: '% OTM', num: true },
+    { key: 'premium', label: 'Premium', num: true },
+    { key: 'premiumYieldPct', label: 'Yield %', num: true },
+    { key: 'annualizedReturnPct', label: 'Ann. Return %', num: true },
+    { key: 'breakeven', label: 'Breakeven', num: true },
+    { key: 'openInterest', label: 'OI', num: true },
+  ];
+  const st = sortState['calls'] || { key: 'annualizedReturnPct', dir: -1 };
+  const sorted = [...filtered].sort((a,b) => {
+    let av = a[st.key], bv = b[st.key];
+    if (typeof av === 'string') return av.localeCompare(bv) * st.dir;
+    return (av - bv) * st.dir;
+  });
+
+  let html = '<table><thead><tr>';
+  cols.forEach(c => {
+    html += `<th class="${c.num?'num':''} ${st.key===c.key?'sorted':''}" data-key="${c.key}">${c.label}</th>`;
+  });
+  html += '</tr></thead><tbody>';
+  sorted.forEach(r => {
+    html += '<tr>';
+    html += `<td><b>${r.ticker}</b></td>`;
+    html += `<td>${r.expiry}</td>`;
+    html += `<td class="num">${r.dte}</td>`;
+    html += `<td class="num">$${fmtNum(r.stockPrice)}</td>`;
+    html += `<td class="num">$${fmtNum(r.strike)}</td>`;
+    html += `<td class="num">${fmtNum(r.pctOTM)}%</td>`;
+    html += `<td class="num">$${fmtNum(r.premium)}</td>`;
+    html += `<td class="num">${fmtNum(r.premiumYieldPct)}%</td>`;
+    html += `<td class="num" style="color:var(--accent)">${fmtNum(r.annualizedReturnPct)}%</td>`;
+    html += `<td class="num">$${fmtNum(r.breakeven)}</td>`;
+    html += `<td class="num">${r.openInterest}</td>`;
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+
+  container.querySelectorAll('thead th').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      const cur = sortState['calls'] || { key: 'annualizedReturnPct', dir: -1 };
+      sortState['calls'] = { key, dir: (cur.key === key ? -cur.dir : 1) };
+      renderCallsTable(rows);
+    });
+  });
+}
+
+function renderTape(mag7Rows){
+  const tape = document.getElementById('tape');
+  if (!mag7Rows || mag7Rows.length === 0) return;
+  const item = (r) => {
+    const sigClass = r.signal === 'below avg' ? 'sig-below' : (r.signal === 'above avg' ? 'sig-above' : 'sig-inline');
+    return `<div class="tape-item"><b>${r.ticker}</b><span class="pe">P/E ${fmtNum(r.trailingPE)}</span><span class="${sigClass}">${r.signal || 'n/a'}</span></div>`;
+  };
+  const strip = mag7Rows.map(item).join('');
+  tape.innerHTML = strip + strip;
+}
+
+function setupTabs(){
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+}
+
+function populateTickerFilter(callRows){
+  const sel = document.getElementById('ticker-filter');
+  const tickers = [...new Set(callRows.map(r => r.ticker))].sort();
+  tickers.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    sel.appendChild(opt);
+  });
+  sel.addEventListener('change', () => renderCallsTable(peState.calls));
+}
+
+async function loadJSON(path){
+  try{
+    const res = await fetch(path, { cache: 'no-store' });
+    if (!res.ok) throw new Error('not found');
+    return await res.json();
+  } catch(e){
+    return null;
+  }
+}
+
+async function init(){
+  setupTabs();
+
+  const [mag7, watchlist, calls] = await Promise.all([
+    loadJSON('data/mag7_pe.json'),
+    loadJSON('data/watchlist_pe.json'),
+    loadJSON('data/covered_calls.json'),
+  ]);
+
+  const asOfCandidates = [mag7, watchlist, calls].filter(Boolean).map(d => d.asOf);
+  document.getElementById('as-of').textContent = asOfCandidates.length
+    ? 'As of ' + fmtDate(asOfCandidates[0])
+    : 'No data available yet.';
+
+  peState.mag7 = mag7 ? mag7.rows : [];
+  peState.watchlist = watchlist ? watchlist.rows : [];
+  peState.benchmarks = watchlist ? watchlist.benchmarks : [];
+  peState.calls = calls ? calls.rows : [];
+
+  renderTape(peState.mag7);
+  renderPETable('mag7-table', peState.mag7, 'mag7');
+  renderPETable('watchlist-table', peState.watchlist, 'watchlist');
+
+  const bNote = document.getElementById('benchmark-note');
+  if (peState.benchmarks.length){
+    bNote.textContent = peState.benchmarks.map(b => `${b.name}: P/E ${fmtNum(b.trailingPE)}`).join('   ·   ');
+  }
+
+  populateTickerFilter(peState.calls);
+  renderCallsTable(peState.calls);
+}
+
+init();
+</script>
+
+</body>
+</html>
