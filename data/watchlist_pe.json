@@ -1,30 +1,227 @@
 {
-  "asOf": "2026-07-03T21:30:00+00:00",
-  "note": "SAMPLE DATA -- replace automatically after the first GitHub Action run",
+  "asOf": "2026-07-06T08:26:29.212510+00:00",
   "benchmarks": [
-    { "ticker": "SPY", "name": "S&P 500 (SPY)", "price": 612.40, "trailingPE": 25.1, "forwardPE": 22.6, "avgPE5y": 23.4, "signal": "in line" },
-    { "ticker": "QQQ", "name": "Nasdaq 100 (QQQ)", "price": 528.90, "trailingPE": 31.8, "forwardPE": 27.9, "avgPE5y": 28.2, "signal": "in line" }
+    {
+      "ticker": "SPY",
+      "name": "S&P 500 (SPY)",
+      "sector": null,
+      "price": 744.78,
+      "trailingPE": 26.67,
+      "forwardPE": null,
+      "avgPE5y": null,
+      "signal": "n/a"
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Nasdaq 100 (QQQ)",
+      "sector": null,
+      "price": 712.6044,
+      "trailingPE": 32.72,
+      "forwardPE": null,
+      "avgPE5y": null,
+      "signal": "n/a"
+    }
   ],
   "rows": [
-    { "ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology", "price": 214.32, "trailingPE": 33.1, "forwardPE": 28.4, "avgPE5y": 29.8, "signal": "above avg" },
-    { "ticker": "MSFT", "name": "Microsoft Corp.", "sector": "Technology", "price": 468.90, "trailingPE": 35.6, "forwardPE": 30.2, "avgPE5y": 33.9, "signal": "in line" },
-    { "ticker": "V", "name": "Visa Inc.", "sector": "Financial Services", "price": 356.20, "trailingPE": 30.4, "forwardPE": 27.1, "avgPE5y": 31.5, "signal": "in line" },
-    { "ticker": "MA", "name": "Mastercard Inc.", "sector": "Financial Services", "price": 552.80, "trailingPE": 34.2, "forwardPE": 29.6, "avgPE5y": 35.0, "signal": "in line" },
-    { "ticker": "COST", "name": "Costco Wholesale", "sector": "Consumer Defensive", "price": 985.10, "trailingPE": 52.3, "forwardPE": 45.9, "avgPE5y": 42.1, "signal": "above avg" },
-    { "ticker": "JNJ", "name": "Johnson & Johnson", "sector": "Healthcare", "price": 162.40, "trailingPE": 15.9, "forwardPE": 14.8, "avgPE5y": 17.2, "signal": "below avg" },
-    { "ticker": "PG", "name": "Procter & Gamble", "sector": "Consumer Defensive", "price": 168.90, "trailingPE": 25.0, "forwardPE": 23.4, "avgPE5y": 24.6, "signal": "in line" },
-    { "ticker": "KO", "name": "Coca-Cola Co.", "sector": "Consumer Defensive", "price": 71.20, "trailingPE": 26.1, "forwardPE": 23.8, "avgPE5y": 25.3, "signal": "in line" },
-    { "ticker": "PEP", "name": "PepsiCo Inc.", "sector": "Consumer Defensive", "price": 148.60, "trailingPE": 21.3, "forwardPE": 19.7, "avgPE5y": 24.8, "signal": "below avg" },
-    { "ticker": "HD", "name": "Home Depot Inc.", "sector": "Consumer Cyclical", "price": 398.70, "trailingPE": 26.8, "forwardPE": 24.5, "avgPE5y": 24.1, "signal": "above avg" },
-    { "ticker": "WMT", "name": "Walmart Inc.", "sector": "Consumer Defensive", "price": 96.30, "trailingPE": 38.5, "forwardPE": 33.2, "avgPE5y": 29.7, "signal": "above avg" },
-    { "ticker": "JPM", "name": "JPMorgan Chase", "sector": "Financial Services", "price": 268.10, "trailingPE": 14.2, "forwardPE": 13.1, "avgPE5y": 12.6, "signal": "above avg" },
-    { "ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "price": 312.40, "trailingPE": 13.8, "forwardPE": 12.9, "avgPE5y": 21.4, "signal": "below avg" },
-    { "ticker": "ABBV", "name": "AbbVie Inc.", "sector": "Healthcare", "price": 198.20, "trailingPE": 17.6, "forwardPE": 15.9, "avgPE5y": 18.3, "signal": "in line" },
-    { "ticker": "MCD", "name": "McDonald's Corp.", "sector": "Consumer Cyclical", "price": 302.50, "trailingPE": 24.9, "forwardPE": 22.7, "avgPE5y": 25.8, "signal": "in line" },
-    { "ticker": "XOM", "name": "Exxon Mobil Corp.", "sector": "Energy", "price": 118.90, "trailingPE": 13.1, "forwardPE": 12.4, "avgPE5y": 14.7, "signal": "below avg" },
-    { "ticker": "CVX", "name": "Chevron Corp.", "sector": "Energy", "price": 162.30, "trailingPE": 14.6, "forwardPE": 13.5, "avgPE5y": 15.9, "signal": "below avg" },
-    { "ticker": "DIS", "name": "Walt Disney Co.", "sector": "Communication Services", "price": 112.80, "trailingPE": 20.4, "forwardPE": 18.2, "avgPE5y": 32.6, "signal": "below avg" },
-    { "ticker": "NKE", "name": "Nike Inc.", "sector": "Consumer Cyclical", "price": 78.40, "trailingPE": 24.1, "forwardPE": 21.6, "avgPE5y": 30.2, "signal": "below avg" },
-    { "ticker": "BRK-B", "name": "Berkshire Hathaway", "sector": "Financial Services", "price": 468.30, "trailingPE": 22.7, "forwardPE": null, "avgPE5y": 20.4, "signal": "above avg" }
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Technology",
+      "price": 308.63,
+      "trailingPE": 37.32,
+      "forwardPE": 32.12,
+      "avgPE5y": 24.03,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "sector": "Technology",
+      "price": 390.49,
+      "trailingPE": 23.26,
+      "forwardPE": 20.17,
+      "avgPE5y": 21.52,
+      "signal": "in line"
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc.",
+      "sector": "Financial Services",
+      "price": 362.13,
+      "trailingPE": 31.54,
+      "forwardPE": 24.36,
+      "avgPE5y": 23.26,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard Incorporated",
+      "sector": "Financial Services",
+      "price": 539.39,
+      "trailingPE": 31.25,
+      "forwardPE": 23.67,
+      "avgPE5y": 25.39,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco Wholesale Corporation",
+      "sector": "Consumer Defensive",
+      "price": 951.67,
+      "trailingPE": 47.85,
+      "forwardPE": 42.07,
+      "avgPE5y": 35.65,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "sector": "Healthcare",
+      "price": 263.04,
+      "trailingPE": 30.48,
+      "forwardPE": 20.68,
+      "avgPE5y": 18.92,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble Company (The)",
+      "sector": "Consumer Defensive",
+      "price": 151.41,
+      "trailingPE": 22.14,
+      "forwardPE": 21.42,
+      "avgPE5y": 21.2,
+      "signal": "in line"
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola Company (The)",
+      "sector": "Consumer Defensive",
+      "price": 84.14,
+      "trailingPE": 26.46,
+      "forwardPE": 24.15,
+      "avgPE5y": 19.15,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "PEP",
+      "name": "Pepsico, Inc.",
+      "sector": "Consumer Defensive",
+      "price": 144.22,
+      "trailingPE": 22.64,
+      "forwardPE": 15.87,
+      "avgPE5y": 23.51,
+      "signal": "in line"
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot, Inc. (The)",
+      "sector": "Consumer Cyclical",
+      "price": 357.9,
+      "trailingPE": 25.44,
+      "forwardPE": 22.24,
+      "avgPE5y": 23.08,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart Inc.",
+      "sector": "Consumer Defensive",
+      "price": 111.84,
+      "trailingPE": 39.38,
+      "forwardPE": 34.04,
+      "avgPE5y": 24.79,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "JPM",
+      "name": "JP Morgan Chase & Co.",
+      "sector": "Financial Services",
+      "price": 334.47,
+      "trailingPE": 16.0,
+      "forwardPE": 14.07,
+      "avgPE5y": 9.34,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group Incorporated",
+      "sector": "Healthcare",
+      "price": 425.36,
+      "trailingPE": 32.05,
+      "forwardPE": 20.32,
+      "avgPE5y": 33.07,
+      "signal": "in line"
+    },
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie Inc.",
+      "sector": "Healthcare",
+      "price": 261.07,
+      "trailingPE": 127.98,
+      "forwardPE": 16.05,
+      "avgPE5y": 79.15,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "MCD",
+      "name": "McDonald's Corporation",
+      "sector": "Consumer Cyclical",
+      "price": 280.63,
+      "trailingPE": 23.15,
+      "forwardPE": 19.73,
+      "avgPE5y": 22.04,
+      "signal": "in line"
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil Holdings Corporation",
+      "sector": "Energy",
+      "price": 137.09,
+      "trailingPE": 23.08,
+      "forwardPE": 12.7,
+      "avgPE5y": 16.94,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron Corporation",
+      "sector": "Energy",
+      "price": 169.2,
+      "trailingPE": 29.48,
+      "forwardPE": 13.39,
+      "avgPE5y": 24.67,
+      "signal": "above avg"
+    },
+    {
+      "ticker": "DIS",
+      "name": "Walt Disney Company (The)",
+      "sector": "Communication Services",
+      "price": 99.5,
+      "trailingPE": 15.92,
+      "forwardPE": 13.29,
+      "avgPE5y": 17.13,
+      "signal": "in line"
+    },
+    {
+      "ticker": "NKE",
+      "name": "Nike, Inc.",
+      "sector": "Consumer Cyclical",
+      "price": 44.09,
+      "trailingPE": 21.0,
+      "forwardPE": 18.55,
+      "avgPE5y": 43.52,
+      "signal": "below avg"
+    },
+    {
+      "ticker": "BRK-B",
+      "name": "Berkshire Hathaway Inc. New",
+      "sector": "Financial Services",
+      "price": 507.78,
+      "trailingPE": 15.1,
+      "forwardPE": 23.65,
+      "avgPE5y": 11.77,
+      "signal": "above avg"
+    }
   ]
 }
