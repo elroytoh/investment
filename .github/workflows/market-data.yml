@@ -20,7 +20,8 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install yfinance
+        run: pip install yfinance pandas 
+        lxml requests
 
       - name: Fetch market data
         run: python scripts/fetch_market_data.py
