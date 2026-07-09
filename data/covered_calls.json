@@ -1,14 +1,35 @@
 {
-  "asOf": "2026-07-03T21:30:00+00:00",
-  "note": "SAMPLE DATA -- replace automatically after the first GitHub Action run",
+  "asOf": "2026-07-09T08:00:59.847890+00:00",
   "rows": [
-    { "ticker": "XOM", "expiry": "2026-08-21", "dte": 46, "strike": 122.5, "stockPrice": 118.90, "premium": 2.15, "pctOTM": 3.03, "premiumYieldPct": 1.81, "annualizedReturnPct": 14.36, "breakeven": 116.75, "openInterest": 812, "nextEarningsDate": "2026-10-30", "earningsBeforeExpiry": false },
-    { "ticker": "UNH", "expiry": "2026-07-17", "dte": 11, "strike": 320.0, "stockPrice": 312.40, "premium": 3.40, "pctOTM": 2.43, "premiumYieldPct": 1.09, "annualizedReturnPct": 36.10, "breakeven": 309.00, "openInterest": 340, "nextEarningsDate": "2026-07-15", "earningsBeforeExpiry": true },
-    { "ticker": "DIS", "expiry": "2026-08-21", "dte": 46, "strike": 117.0, "stockPrice": 112.80, "premium": 2.60, "pctOTM": 3.72, "premiumYieldPct": 2.30, "annualizedReturnPct": 18.27, "breakeven": 110.20, "openInterest": 601, "nextEarningsDate": "2026-08-06", "earningsBeforeExpiry": true },
-    { "ticker": "NKE", "expiry": "2026-07-17", "dte": 11, "strike": 80.0, "stockPrice": 78.40, "premium": 1.05, "pctOTM": 2.04, "premiumYieldPct": 1.34, "annualizedReturnPct": 44.47, "breakeven": 77.35, "openInterest": 275, "nextEarningsDate": "2026-09-24", "earningsBeforeExpiry": false },
-    { "ticker": "CVX", "expiry": "2026-08-21", "dte": 46, "strike": 168.0, "stockPrice": 162.30, "premium": 2.80, "pctOTM": 3.51, "premiumYieldPct": 1.73, "annualizedReturnPct": 13.71, "breakeven": 159.50, "openInterest": 420, "nextEarningsDate": "2026-11-01", "earningsBeforeExpiry": false },
-    { "ticker": "JPM", "expiry": "2026-08-21", "dte": 46, "strike": 278.0, "stockPrice": 268.10, "premium": 4.10, "pctOTM": 3.69, "premiumYieldPct": 1.53, "annualizedReturnPct": 12.14, "breakeven": 264.00, "openInterest": 198, "nextEarningsDate": "2026-10-14", "earningsBeforeExpiry": false },
-    { "ticker": "ABBV", "expiry": "2026-07-17", "dte": 11, "strike": 205.0, "stockPrice": 198.20, "premium": 1.85, "pctOTM": 3.43, "premiumYieldPct": 0.93, "annualizedReturnPct": 30.94, "breakeven": 196.35, "openInterest": 156, "nextEarningsDate": "2026-07-31", "earningsBeforeExpiry": false },
-    { "ticker": "WMT", "expiry": "2026-08-21", "dte": 46, "strike": 100.0, "stockPrice": 96.30, "premium": 1.60, "pctOTM": 3.84, "premiumYieldPct": 1.66, "annualizedReturnPct": 13.19, "breakeven": 94.70, "openInterest": 510, "nextEarningsDate": "2026-08-18", "earningsBeforeExpiry": true }
+    {
+      "ticker": "DIS",
+      "expiry": "2026-08-21",
+      "dte": 43,
+      "strike": 155.0,
+      "stockPrice": 96.7,
+      "premium": 0.25,
+      "pctOTM": 60.29,
+      "premiumYieldPct": 0.26,
+      "annualizedReturnPct": 2.21,
+      "breakeven": 96.45,
+      "openInterest": 38,
+      "nextEarningsDate": "2026-08-05",
+      "earningsBeforeExpiry": true
+    },
+    {
+      "ticker": "JPM",
+      "expiry": "2026-08-21",
+      "dte": 43,
+      "strike": 470.0,
+      "stockPrice": 330.62,
+      "premium": 0.39,
+      "pctOTM": 42.16,
+      "premiumYieldPct": 0.12,
+      "annualizedReturnPct": 1.02,
+      "breakeven": 330.23,
+      "openInterest": 43,
+      "nextEarningsDate": "2026-07-14",
+      "earningsBeforeExpiry": true
+    }
   ]
 }
