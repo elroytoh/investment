@@ -1,75 +1,13 @@
 {
-  "asOf": "2026-07-08T22:34:38.790092+00:00",
+  "asOf": "2026-07-03T21:30:00+00:00",
+  "note": "SAMPLE DATA -- replace automatically after the first GitHub Action run",
   "rows": [
-    {
-      "ticker": "AAPL",
-      "name": "Apple Inc.",
-      "sector": "Technology",
-      "price": 313.39,
-      "trailingPE": 37.94,
-      "forwardPE": 32.61,
-      "avgPE5y": 24.07,
-      "signal": "above avg"
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft Corporation",
-      "sector": "Technology",
-      "price": 383.34,
-      "trailingPE": 22.82,
-      "forwardPE": 19.8,
-      "avgPE5y": 21.5,
-      "signal": "in line"
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet Inc.",
-      "sector": "Communication Services",
-      "price": 361.92,
-      "trailingPE": 27.63,
-      "forwardPE": 24.86,
-      "avgPE5y": 13.29,
-      "signal": "above avg"
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon.com, Inc.",
-      "sector": "Consumer Cyclical",
-      "price": 243.62,
-      "trailingPE": 31.35,
-      "forwardPE": 24.63,
-      "avgPE5y": 22.2,
-      "signal": "above avg"
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "sector": "Technology",
-      "price": 204.12,
-      "trailingPE": 31.21,
-      "forwardPE": 15.99,
-      "avgPE5y": 13.59,
-      "signal": "above avg"
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms, Inc.",
-      "sector": "Communication Services",
-      "price": 603.12,
-      "trailingPE": 21.92,
-      "forwardPE": 16.37,
-      "avgPE5y": 15.36,
-      "signal": "above avg"
-    },
-    {
-      "ticker": "TSLA",
-      "name": "Tesla, Inc.",
-      "sector": "Consumer Cyclical",
-      "price": 394.06,
-      "trailingPE": 361.52,
-      "forwardPE": 154.22,
-      "avgPE5y": 266.01,
-      "signal": "above avg"
-    }
+    { "ticker": "AAPL", "name": "Apple Inc.", "sector": "Technology", "price": 214.32, "trailingPE": 33.1, "forwardPE": 28.4, "avgPE5y": 29.8, "return1M": 2.4, "signal": "above avg" },
+    { "ticker": "MSFT", "name": "Microsoft Corp.", "sector": "Technology", "price": 468.90, "trailingPE": 35.6, "forwardPE": 30.2, "avgPE5y": 33.9, "return1M": -1.1, "signal": "in line" },
+    { "ticker": "GOOGL", "name": "Alphabet Inc.", "sector": "Communication Services", "price": 189.45, "trailingPE": 24.7, "forwardPE": 21.3, "avgPE5y": 25.6, "return1M": 0.8, "signal": "in line" },
+    { "ticker": "AMZN", "name": "Amazon.com Inc.", "sector": "Consumer Cyclical", "price": 231.10, "trailingPE": 38.9, "forwardPE": 32.1, "avgPE5y": 52.4, "return1M": 3.2, "signal": "below avg" },
+    { "ticker": "NVDA", "name": "NVIDIA Corp.", "sector": "Technology", "price": 158.77, "trailingPE": 46.2, "forwardPE": 34.8, "avgPE5y": 60.1, "return1M": -3.6, "signal": "below avg" },
+    { "ticker": "META", "name": "Meta Platforms Inc.", "sector": "Communication Services", "price": 712.55, "trailingPE": 27.3, "forwardPE": 23.9, "avgPE5y": 26.5, "return1M": 1.5, "signal": "in line" },
+    { "ticker": "TSLA", "name": "Tesla Inc.", "sector": "Consumer Cyclical", "price": 298.60, "trailingPE": 88.4, "forwardPE": 71.2, "avgPE5y": 95.7, "return1M": -5.8, "signal": "below avg" }
   ]
 }
