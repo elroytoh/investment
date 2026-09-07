@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-09-04T23:12:37.908773+00:00",
+  "asOf": "2026-09-07T23:41:47.518726+00:00",
   "benchmarks": [
     {
       "ticker": "SPY",
@@ -52,10 +52,10 @@
       "name": "GOOGL",
       "sector": "Unknown",
       "price": 338.46,
-      "trailingPE": 16.98,
+      "trailingPE": 16.97,
       "forwardPE": 22.79,
-      "avgPE5y": 9.07,
-      "return1M": -0.26,
+      "avgPE5y": 9.05,
+      "return1M": -0.2,
       "signal": "above avg"
     },
     {
@@ -63,10 +63,10 @@
       "name": "PEP",
       "sector": "Unknown",
       "price": 137.63,
-      "trailingPE": 18.04,
+      "trailingPE": 18.06,
       "forwardPE": 15.33,
-      "avgPE5y": 19.65,
-      "return1M": -1.93,
+      "avgPE5y": 19.47,
+      "return1M": -0.88,
       "signal": "in line"
     },
     {
@@ -85,9 +85,9 @@
       "name": "CVX",
       "sector": "Unknown",
       "price": 208.6,
-      "trailingPE": 20.06,
+      "trailingPE": 20.08,
       "forwardPE": 15.53,
-      "avgPE5y": 13.95,
+      "avgPE5y": 13.96,
       "return1M": 1.19,
       "signal": "above avg"
     },
@@ -107,9 +107,9 @@
       "name": "MCD",
       "sector": "Unknown",
       "price": 255.69,
-      "trailingPE": 20.77,
+      "trailingPE": 20.79,
       "forwardPE": 18.29,
-      "avgPE5y": 21.52,
+      "avgPE5y": 21.54,
       "return1M": -2.29,
       "signal": "in line"
     },
@@ -140,9 +140,9 @@
       "name": "PG",
       "sector": "Unknown",
       "price": 146.44,
-      "trailingPE": 22.09,
+      "trailingPE": 22.12,
       "forwardPE": 19.79,
-      "avgPE5y": 21.8,
+      "avgPE5y": 21.84,
       "return1M": 0.91,
       "signal": "in line"
     },
@@ -151,9 +151,9 @@
       "name": "HD",
       "sector": "Unknown",
       "price": 321.05,
-      "trailingPE": 22.48,
+      "trailingPE": 22.47,
       "forwardPE": 20.02,
-      "avgPE5y": 22.63,
+      "avgPE5y": 22.61,
       "return1M": -1.35,
       "signal": "in line"
     },
@@ -162,9 +162,9 @@
       "name": "META",
       "sector": "Unknown",
       "price": 616.77,
-      "trailingPE": 23.22,
+      "trailingPE": 23.26,
       "forwardPE": 17.64,
-      "avgPE5y": 16.19,
+      "avgPE5y": 16.21,
       "return1M": 7.76,
       "signal": "above avg"
     },
@@ -173,9 +173,9 @@
       "name": "UNH",
       "sector": "Unknown",
       "price": 397.14,
-      "trailingPE": 25.52,
+      "trailingPE": 25.51,
       "forwardPE": 17.7,
-      "avgPE5y": 28.24,
+      "avgPE5y": 28.22,
       "return1M": 1.99,
       "signal": "in line"
     },
@@ -195,9 +195,9 @@
       "name": "MSFT",
       "sector": "Unknown",
       "price": 499.7,
-      "trailingPE": 27.82,
+      "trailingPE": 27.85,
       "forwardPE": 21.2,
-      "avgPE5y": 20.56,
+      "avgPE5y": 20.59,
       "return1M": -1.5,
       "signal": "above avg"
     },
@@ -207,7 +207,7 @@
       "sector": "Unknown",
       "price": 230.36,
       "trailingPE": 29.16,
-      "forwardPE": 14.9,
+      "forwardPE": 14.84,
       "avgPE5y": 12.1,
       "return1M": 4.34,
       "signal": "above avg"
@@ -217,21 +217,10 @@
       "name": "MA",
       "sector": "Unknown",
       "price": 579.21,
-      "trailingPE": 31.89,
+      "trailingPE": 31.84,
       "forwardPE": 25.15,
-      "avgPE5y": 24.58,
+      "avgPE5y": 24.54,
       "return1M": -1.71,
-      "signal": "above avg"
-    },
-    {
-      "ticker": "JNJ",
-      "name": "JNJ",
-      "sector": "Unknown",
-      "price": 275.23,
-      "trailingPE": 31.89,
-      "forwardPE": 22.36,
-      "avgPE5y": 19.3,
-      "return1M": 3.53,
       "signal": "above avg"
     },
     {
@@ -246,13 +235,24 @@
       "signal": "above avg"
     },
     {
+      "ticker": "JNJ",
+      "name": "JNJ",
+      "sector": "Unknown",
+      "price": 275.23,
+      "trailingPE": 31.97,
+      "forwardPE": 22.36,
+      "avgPE5y": 19.34,
+      "return1M": 3.53,
+      "signal": "above avg"
+    },
+    {
       "ticker": "AAPL",
       "name": "AAPL",
       "sector": "Unknown",
       "price": 319.97,
-      "trailingPE": 36.65,
+      "trailingPE": 36.61,
       "forwardPE": 33.42,
-      "avgPE5y": 23.42,
+      "avgPE5y": 23.39,
       "return1M": 0.98,
       "signal": "above avg"
     },
@@ -262,7 +262,7 @@
       "sector": "Unknown",
       "price": 107.14,
       "trailingPE": 38.82,
-      "forwardPE": 33.16,
+      "forwardPE": 33.17,
       "avgPE5y": 26.18,
       "return1M": 2.16,
       "signal": "above avg"
@@ -272,9 +272,9 @@
       "name": "COST",
       "sector": "Unknown",
       "price": 915.74,
-      "trailingPE": 46.02,
+      "trailingPE": 46.09,
       "forwardPE": 40.47,
-      "avgPE5y": 36.42,
+      "avgPE5y": 36.47,
       "return1M": -2.98,
       "signal": "above avg"
     },
@@ -294,9 +294,9 @@
       "name": "TSLA",
       "sector": "Unknown",
       "price": 354.08,
-      "trailingPE": 324.84,
+      "trailingPE": 321.89,
       "forwardPE": 164.03,
-      "avgPE5y": 268.08,
+      "avgPE5y": 265.64,
       "return1M": -3.77,
       "signal": "above avg"
     }

@@ -1,14 +1,14 @@
 {
-  "asOf": "2026-09-04T23:12:37.908773+00:00",
+  "asOf": "2026-09-07T23:41:47.518726+00:00",
   "rows": [
     {
       "ticker": "AAPL",
       "name": "Apple Inc.",
       "sector": "Technology",
       "price": 319.97,
-      "trailingPE": 36.65,
+      "trailingPE": 36.61,
       "forwardPE": 33.42,
-      "avgPE5y": 23.42,
+      "avgPE5y": 23.39,
       "return1M": 0.98,
       "signal": "above avg"
     },
@@ -17,9 +17,9 @@
       "name": "Microsoft Corporation",
       "sector": "Technology",
       "price": 499.7,
-      "trailingPE": 27.82,
+      "trailingPE": 27.85,
       "forwardPE": 21.2,
-      "avgPE5y": 20.56,
+      "avgPE5y": 20.59,
       "return1M": -1.5,
       "signal": "above avg"
     },
@@ -28,10 +28,10 @@
       "name": "Alphabet Inc.",
       "sector": "Communication Services",
       "price": 338.46,
-      "trailingPE": 16.98,
+      "trailingPE": 16.97,
       "forwardPE": 22.79,
-      "avgPE5y": 9.07,
-      "return1M": -0.26,
+      "avgPE5y": 9.05,
+      "return1M": -0.2,
       "signal": "above avg"
     },
     {
@@ -51,7 +51,7 @@
       "sector": "Technology",
       "price": 230.36,
       "trailingPE": 29.16,
-      "forwardPE": 14.9,
+      "forwardPE": 14.84,
       "avgPE5y": 12.1,
       "return1M": 4.34,
       "signal": "above avg"
@@ -61,9 +61,9 @@
       "name": "Meta Platforms, Inc.",
       "sector": "Communication Services",
       "price": 616.77,
-      "trailingPE": 23.22,
+      "trailingPE": 23.26,
       "forwardPE": 17.64,
-      "avgPE5y": 16.19,
+      "avgPE5y": 16.21,
       "return1M": 7.76,
       "signal": "above avg"
     },
@@ -72,9 +72,9 @@
       "name": "Tesla, Inc.",
       "sector": "Consumer Cyclical",
       "price": 354.08,
-      "trailingPE": 324.84,
+      "trailingPE": 321.89,
       "forwardPE": 164.03,
-      "avgPE5y": 268.08,
+      "avgPE5y": 265.64,
       "return1M": -3.77,
       "signal": "above avg"
     }
