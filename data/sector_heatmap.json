@@ -1,10 +1,10 @@
 {
-  "asOf": "2026-10-02T01:02:20.800818+00:00",
+  "asOf": "2026-10-03T00:39:51.467345+00:00",
   "rows": [
     {
       "sector": "Unknown",
-      "avgPE": 39.0,
-      "avgReturn1M": NaN,
+      "avgPE": 39.6,
+      "avgReturn1M": 0.18,
       "count": 25
     }
   ]
