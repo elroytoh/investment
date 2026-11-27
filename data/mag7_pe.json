@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-11-26T03:43:11.970233+00:00",
+  "asOf": "2026-11-27T03:44:22.909513+00:00",
   "rows": [
     {
       "ticker": "AAPL",
@@ -29,7 +29,7 @@
       "sector": "Communication Services",
       "price": 273.1,
       "trailingPE": 14.26,
-      "forwardPE": 17.85,
+      "forwardPE": 17.86,
       "avgPE5y": 9.66,
       "return1M": -2.41,
       "signal": "above avg"
@@ -50,9 +50,9 @@
       "name": "NVIDIA Corporation",
       "sector": "Technology",
       "price": 149.3,
-      "trailingPE": 16.68,
+      "trailingPE": 16.04,
       "forwardPE": 8.99,
-      "avgPE5y": 11.21,
+      "avgPE5y": 10.78,
       "return1M": -27.04,
       "signal": "above avg"
     },
@@ -73,7 +73,7 @@
       "sector": "Consumer Cyclical",
       "price": 380.14,
       "trailingPE": 417.74,
-      "forwardPE": 176.05,
+      "forwardPE": 175.68,
       "avgPE5y": 321.61,
       "return1M": -4.92,
       "signal": "above avg"
